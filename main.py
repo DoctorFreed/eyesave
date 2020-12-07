@@ -1,6 +1,7 @@
 import time
 import tkinter
 import tkinter.messagebox
+import argparse
 
 
 def messagebox(title='EyeSave', text='None'):
@@ -35,5 +36,17 @@ def timer_start(session=20, pause=5):
         messagebox('EyeSave', 'Break is over! Starting a {0}-minute session?'.format(session))
 
 
+def main():
+    parser = argparse.ArgumentParser(
+        description='EyeSave - script for eye safety'
+    )
+    parser.add_argument('--session', help='the time you will be working at the computer '
+                                          '(in minutes)', type=int, default=20)
+    parser.add_argument('--pause', help='time that you will rest (in minutes)', type=int, default=5)
+
+    args = parser.parse_args()
+    timer_start(session=args.session, pause=args.pause)
+
+
 if __name__ == '__main__':
-    timer_start()
+    main()
