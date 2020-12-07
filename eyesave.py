@@ -40,9 +40,9 @@ def main():
     parser = argparse.ArgumentParser(
         description='EyeSave - script for eye safety'
     )
-    parser.add_argument('--session', help='the time you will be working at the computer '
-                                          '(in minutes)', type=int, default=20)
-    parser.add_argument('--pause', help='time that you will rest (in minutes)', type=int, default=5)
+    parser.add_argument('-s', '--session', help='the time you will be working at the computer '
+                                                '(in minutes)', type=int, default=20)
+    parser.add_argument('-p', '--pause', help='time that you will rest (in minutes)', type=int, default=5)
 
     args = parser.parse_args()
     timer_start(session=args.session, pause=args.pause)
