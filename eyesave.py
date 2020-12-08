@@ -23,6 +23,12 @@ def parse_args():
 
 
 def countdown(interval):
+    """
+    Console timer that is updated in real time
+
+    :param interval: Timer running time
+    :return: None
+    """
     interval -= 1
     for i in range(interval, -1, -1):
         for j in range(59, -1, -1):
@@ -33,13 +39,22 @@ def countdown(interval):
 
 
 def timer_start(session=20, pause=5, session_count=9000):
+    """
+    Starts the timer loop, only the specified number of sessions works
+
+    :param session: The time you will work is specified in minutes (default 20)
+    :param pause: The time you will rest is indicated in minutes (default 5)
+    :param session_count: For one session count is considered session and pause.
+    :return: None
+    """
     for i in range(session_count):
+        '\nYour {0} minutes of computer use have started'.format(session)
         playsound(r'c:\windows\media\alarm02.wav')
         countdown(session)
         playsound(r'c:\windows\media\alarm02.wav')
-        print('\nBreak time!')
+        print('\nA break of {0} minutes!'.format(pause))
         countdown(pause)
-        print('\nsession number: ', i)
+        print('\nSession number: ', i)
 
 
 def main():
