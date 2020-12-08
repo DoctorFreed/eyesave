@@ -11,7 +11,7 @@ def parse_args():
     :return: args. An object that contains all passed arguments.
     """
     parser = argparse.ArgumentParser(
-        description='EyeSave - script for eye safety'
+        description="EyeSave - script for eye safety \n https://github.com/DoctorFreed/eyesave"
     )
     parser.add_argument('-s', '--session', help='the time you will be working at the computer '
                                                 '(in minutes)', type=int, default=20)
