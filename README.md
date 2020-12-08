@@ -48,5 +48,36 @@ optional arguments:
                         one session is one cycle of work and rest.
 ```
 
+## Examples
+
+Use with default settings, 20 minutes of work, 5 minutes of rest from the screen.
+```
+   python eyesave.py
+```
+![DefaultUse](img_readme/2.png)
+
+### Custom parameters
+For example, you want to put your own version of time of work and rest, in this case you must use such arguments as '-s' is that '-p' is a relaxation time.
+
+Let's take an example like 40 minutes of work and 10 minutes of rest.
+```
+   python eyesave.py -s 40 -p 10
+```
+![CustomUse](img_readme/3.png)
+
+It is also possible to specify the number of sessions of work, for one session is considered work+rest.
+
+To do this, use the '-c ' parameter. for example, we want to run a script with five sessions
+```
+   python eyesave.py -s 40 -p 10 -с 5
+```
+At the end of all sessions, the script will be disabled.
+
+#TODO
+- [ ] Add the ability to use custom sounds.
+- [ ] To make Russian localization
+
+
+
 
 
